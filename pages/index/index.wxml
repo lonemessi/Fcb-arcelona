@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+  <!--头目新闻  -->
+  <image class='head_img' src='/images/Index/index_head.jpg'></image>
+  <view class='head-imag-hover'>
+    <text class='main-title'>巴塞罗那俱乐部</text>
+  </view>
+  <image class='badge_img' src='/images/Index/badge.png'></image>
+
+  <!--球员  -->
+  <view class='player-container'>
+    <text class='player-title'>球员</text>
+    <scroll-view class='player-imgs' scroll-x="true" style='width:100%'>
+      <block wx:for="{{playerData}}" wx:for-item="item" wx:for-index="index">
+        <view class='cast-container'>
+          <image class='cast-img' src='{{item.picture}}'></image>
+          <text class='cast-name'>{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+
+  </view>
+
+
+  <view class='section_case'>
+
+    <view class="section_topView">
+      <view class="section_topView_lineview"></view>
+      <text class="section_topView_text">赛事预告</text>
+    </view>
+    <!--赛事内容  -->
+    <view class='game_container'>
+      <block wx:for="{{gameData}}" wx:for-item="item" wx:for-index="index">
+        <view class='game-content'>
+          <view class='game-team'>
+            <image class='game-image' src='{{item.picturea}}'></image>
+            <text class='game-font'>{{item.teama}}</text>
+          </view>
+
+          <view class='game-time'>
+            <text class='game-title'>{{item.title}}</text>
+            <text class='game-titletime'>{{item.time}}</text>
+            <text class='game-gameover'>{{item.gameover}}</text>
+          </view>
+          <view class='game-team'>
+            <image class='game-image' src='{{item.pictureb}}'></image>
+            <text class='game-font'>{{item.teamb}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+
+
+</view>

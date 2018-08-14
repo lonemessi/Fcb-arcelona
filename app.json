@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "FCB-arcelona",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+      "color": "#999999",
+      "selectedColor": "#7ECF4E",
+      "backgroundColor": "#f6f6f6",
+      "borderStyle": "black",
+      "position": "bottom",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "故事",
+      "iconPath": "images/Tabbar/tabbar_football_norma.png",
+      "selectedIconPath": "images/Tabbar/tabbar_football_green.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "赛事",
+      "iconPath": "images/Tabbar/tabbar_game_norma.png",
+      "selectedIconPath": "images/Tabbar/tabbar_game_green.png"
+    }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+  <scroll-view class='container_ScrollView' scroll-y='true' bindscroll='scroll'>
+    <!--banner图片  -->
+    <view class='bannerView'>
+      <swiper indicator-dots='true' indicator-color='#cccccc' indicator-active-color='#ffffff' autoplay='true' interval='10000' circular='true'>
+        <swiper-item>
+          <image src='/images/Banner/banner_a.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+          <image src='/images/Banner/banner_b.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+          <image src='/images/Banner/banner_c.jpg'></image>
+        </swiper-item>
+      </swiper>
+    </view>
+
+
+    <!--冠军个数  -->
+    <view class='section_championInfo'>
+      <block wx:for="{{championInfoData}}" wx:for-item="item" wx:for-index="index">
+        <view class='section_championInfo_item'>
+          <view class='section_championInfo_item_title'>{{item.title}}</view>
+          <view class='section_championInfo_item_content'>
+            <view style="font-size: 40rpx;color: #000000">{{item.num}}</view>
+            <view style='font-size: 24rpx;color: #000000'>{{item.unit}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    
+    <!--新闻内容  -->
+
+   <view class='container_news'>
+   <block wx:for="{{NewsCasesData}}" wx:for-item="item" wx:for-index="index">
+   <view class='news_data'>
+   <image class='news_images' src='{{item.picture}}'></image>
+   <text class='news_detail'>{{item.detail}}</text>
+   </view>
+   </block>
+   </view>
+
+
+  </scroll-view>
+
+
+</view>
